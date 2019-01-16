@@ -1,2 +1,6 @@
 ---
 # defaults file for ansible-kafka
+kafka_download_url: http://mirrors.estointernet.in/apache/kafka/2.1.0/kafka_2.12-2.1.0.tgz
+kafka_home: /home/kafka
+systemd_config_dir: /etc/systemd/system
+
