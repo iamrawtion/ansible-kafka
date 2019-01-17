@@ -2,6 +2,8 @@
 - hosts: filebeat
   sudo: yes
   gather_facts: no
+  vars_files: 
+    - ../defaults/main.yml
 # tasks file for elk
   tasks:
     - name: Add Kafka user
@@ -24,7 +26,7 @@
         state: present
         update_cache: yes
         force: yes
-
+    
     - name: Download Kafka tar
       get_url:
         url: "{{ kafka_download_url }}"

@@ -1,2 +1,9 @@
 ---
 # tasks file for ansible-kafka
+- hosts: all
+  remote_user: "{{ ansible_system_user }}"
+  vars_files:
+    - ../vars/main.yml
+
+- name: Install Kafka
+  include: kafka.yml
